@@ -24,7 +24,8 @@ for row in reader:
 sorted_by_date = sorted(obamadonations.items(), key=lambda (key, val): key)
 # unzips list of pairs into two llsts
 xs, ys = zip(*sorted_by_date)
+fig = plt.figure(figsize=(15,5))
 plt.plot(xs, ys, label='line 1')
 plt.legend(loc='upper center', ncol=4)
-plt.savefig('/tmp/obamadonations.png', format='png')
+plt.savefig('./tmp/obamadonations.png', format='png')
 
